@@ -13,14 +13,20 @@
     Hello, how are you today
 
     <div>
-        <h2>Glasses: 0</h2>
-        <button>+1 glass</button>
+        <h2>Glasses: <a id="display">0</a></h2>
+        <button onclick="add()">+1 glass</button>
     </div>
 
     <script>
-        var glasses = 0
-        
+        var glasses = 0;
         //TODO: Add a counter
+
+        function add() {
+            glasses += 1;
+            console.log(glasses);
+            document.getElementById("display").innerHTML = glasses;
+        }
+
     </script>
 
 </body>
