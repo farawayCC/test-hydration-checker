@@ -10,11 +10,19 @@
 
 <body>
 
-    Hello, how are you today
+    <h1>
+        Hello <a id="username">fname</a>
+    </h1>
 
     <div>
         <h2>Glasses: <a id="display">0</a></h2>
         <button onclick="add()">+1 glass</button>
+    </div>
+    <br>
+    <div>
+        <label for="fname">Type in your username:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <button onclick="changeUsername()">Save</button>
     </div>
 
     <script>
@@ -27,6 +35,12 @@
             document.getElementById("display").innerHTML = glasses;
         }
 
+        // var usrname = "";
+
+        function changeUsername() {
+            const usrname = document.getElementById("fname").value;
+            document.getElementById("username").innerHTML = usrname;
+        }
     </script>
 
 </body>
