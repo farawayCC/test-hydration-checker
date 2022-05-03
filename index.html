@@ -11,7 +11,7 @@
 <body>
 
     <h1>
-        Hello <a id="username">fname</a>
+        Hello, <a id="username">username</a>
     </h1>
 
     <div>
@@ -20,22 +20,21 @@
     </div>
     <br>
     <div>
-        <label for="fname">Type in your username:</label><br>
-        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="fname">Type in your username:</label>
+        <br>
+        <input type="text" id="fname" name="fname" value="John">
+        <br>
         <button onclick="changeUsername()">Save</button>
-    </div>
+    </br>
 
     <script>
         var glasses = 0;
-        //TODO: Add a counter
 
         function add() {
             glasses += 1;
             console.log(glasses);
             document.getElementById("display").innerHTML = glasses;
         }
-
-        // var usrname = "";
 
         function changeUsername() {
             const usrname = document.getElementById("fname").value;
